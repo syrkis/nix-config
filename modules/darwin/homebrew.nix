@@ -36,7 +36,6 @@
       "zen-browser"
       "unity-hub"
       "logseq"
-      "raycast"
       "zed"
       "iterm2"
       "skim"
@@ -47,6 +46,7 @@
       "zotero"
       "fuse-t"
       "fuse-t-sshfs"
+      "sol"
     ];
   };
 }
