@@ -81,5 +81,6 @@
     epy
     rclone
     duti
+    R
   ];
 }
