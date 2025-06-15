@@ -9,6 +9,8 @@
   environment.shells = with pkgs; [ zsh bash fish nushell ];
 
   # Nix configuration
+  nix.enable = false;
+
   nix.extraOptions = ''
     experimental-features = nix-command flakes
     allow-dirty = true

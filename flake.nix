@@ -26,6 +26,10 @@
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+    homebrew-fuse-t = {
+      url = "github:macos-fuse-t/homebrew-cask";
+      flake = false;
+    };
   };
   outputs = inputs: {
     darwinConfigurations = {

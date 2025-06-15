@@ -45,6 +45,8 @@
       "ghostty"
       "spotify"
       "zotero"
+      "fuse-t"
+      "fuse-t-sshfs"
     ];
   };
 }

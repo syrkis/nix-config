@@ -79,6 +79,7 @@
 
     # other
     epy
-
+    rclone
+    duti
   ];
 }

@@ -22,6 +22,7 @@
     taps = {
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "macos-fuse-t/homebrew-cask" = inputs.homebrew-fuse-t;
     };
 
     # Automatically migrate existing Homebrew installations
