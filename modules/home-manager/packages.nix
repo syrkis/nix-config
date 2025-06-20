@@ -82,5 +82,8 @@
     rclone
     duti
     R
+    awscli2
+    lean4
+    netlify-cli
   ];
 }

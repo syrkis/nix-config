@@ -47,6 +47,7 @@
       "fuse-t"
       "fuse-t-sshfs"
       "sol"
+      "readest"
     ];
   };
 }
