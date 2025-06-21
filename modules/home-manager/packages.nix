@@ -30,7 +30,7 @@
     tealdeer
     croc
     just
-    hurl
+    # hurl
     nmap
     asciinema
     watch
@@ -39,7 +39,7 @@
     ffmpeg
     imagemagick
     ghostscript
-    blender
+    # blender
 
     # Documents & Publishing
     pandoc
@@ -78,7 +78,6 @@
     glab # GitLab CLI (if you use GitLab)
 
     # other
-    epy
     rclone
     duti
     R
