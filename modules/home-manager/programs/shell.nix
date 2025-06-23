@@ -32,6 +32,10 @@
 
     fish.shellAliases = {
       cd = "z"; # Replace cd with zoxide
+      cat = "bat";
+      less = "bat";
+      grep = "rg";
+      man = "tldr";
     };
 
     # Modern ls replacement

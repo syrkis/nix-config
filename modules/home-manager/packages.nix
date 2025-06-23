@@ -5,6 +5,7 @@
 
     # Development tools
     typescript
+    ripgrep
     nodejs_22
     clojure
     uv
