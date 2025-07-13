@@ -13,7 +13,6 @@
       "pdf2svg"
       "cmake"
       "gettext"
-      "wakatime-cli"
       "gmp"
       "hiredis"
       "jpeg-turbo"
@@ -27,27 +26,24 @@
       "gettext"
       "openssl"
       "tinymist"
+      "ollama"
     ];
 
     casks = [
-      "steam"
       "brave-browser"
       "slack"
       "zen-browser"
       "unity-hub"
       "logseq"
-      "zed"
-      "iterm2"
       "skim"
       "obs"
       "vagrant"
       "ghostty"
-      "spotify"
       "zotero"
       "fuse-t"
       "fuse-t-sshfs"
-      "sol"
       "readest"
+      "zed"
     ];
   };
 }

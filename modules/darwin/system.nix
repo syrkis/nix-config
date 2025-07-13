@@ -11,10 +11,18 @@
   # Nix configuration
   nix.enable = false;
 
-  nix.extraOptions = ''
-    experimental-features = nix-command flakes
-    allow-dirty = true
-  '';
+  # Nix configuration
+  nix.settings = {
+    experimental-features = [ "nix-command" "flakes" ];
+    trusted-public-keys = [
+      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+      "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
+    ];
+    substituters =
+      [ "https://cache.nixos.org/" "https://determinate.cachix.org" ];
+    allow-dirty = true;
+  };
+  documentation.enable = false;
 
   # System packages and paths
   environment = {
@@ -43,9 +51,9 @@
       tilesize = 48;
       persistent-apps = [
         { app = "System/Applications/Mail.app"; }
-        { app = "/Applications/Zotero.app"; }
-        { app = "/Applications/Zen.app"; }
         { app = "/Applications/Zed.app"; }
+        { app = "/Applications/Zen.app"; }
+        { app = "/Applications/Zotero.app"; }
         { app = "/Applications/Ghostty.app"; }
         { app = "/System/Applications/System Settings.app"; }
       ];

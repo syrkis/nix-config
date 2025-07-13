@@ -1,19 +1,14 @@
 {
   description = "learning nix";
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     fenix.url = "github:nix-community/fenix";
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Dotfiles
-    # dotfiles = {
-    # url = "github:syrkis/dotfiles";
-    # flake = false;
-    # };
-
+    # Brew
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     # Declarative tap management

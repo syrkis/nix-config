@@ -32,23 +32,23 @@
     croc
     just
     # hurl
-    nmap
+    # nmap
     asciinema
     watch
 
     # Media & Graphics
-    ffmpeg
-    imagemagick
-    ghostscript
+    # ffmpeg
+    # imagemagick
+    # ghostscript
     # blender
 
     # Documents & Publishing
     pandoc
     typst
     typstyle
-    hledger
-    hledger-ui
-    newcomputermodern
+    # hledger
+    # hledger-ui
+    # newcomputermodern
 
     # Security & Privacy
     gnupg
@@ -59,11 +59,10 @@
     himalaya
 
     # System utilities
-    less
     starship
     bat
-    ollama
-    yazi
+    # ollama
+    # yazi
     dust
     procs
 
@@ -76,14 +75,21 @@
     # git stuff
     gh # GitHub CLI
     git-lfs # Large file support
-    glab # GitLab CLI (if you use GitLab)
+    # glab # GitLab CLI (if you use GitLab)
 
     # other
     rclone
     duti
-    R
+    # R
     awscli2
     lean4
     netlify-cli
+    direnv
+    # zed-editor
+    gemini-cli
+    wakapi
+    colima
+    docker
+    tesseract
   ];
 }

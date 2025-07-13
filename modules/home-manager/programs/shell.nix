@@ -3,7 +3,7 @@
     # Enable shell programs (required for aliases to work)
     bash.enable = true;
     zsh.enable = true;
-    fish.enable = true;
+    # fish.enable = true;
 
     # Modern shell prompt
     starship.enable = true;
@@ -30,13 +30,13 @@
       cd = "z"; # Replace cd with zoxide
     };
 
-    fish.shellAliases = {
-      cd = "z"; # Replace cd with zoxide
-      cat = "bat";
-      less = "bat";
-      grep = "rg";
-      man = "tldr";
-    };
+    # fish.shellAliases = {
+    # cd = "z"; # Replace cd with zoxide
+    # cat = "bat";
+    # less = "bat";
+    # grep = "rg";
+    # man = "tldr";
+    # };
 
     # Modern ls replacement
     eza = {
