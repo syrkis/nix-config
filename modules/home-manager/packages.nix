@@ -8,7 +8,6 @@
     ripgrep
     nodejs_22
     clojure
-    uv
     nixd
     nil
     nixpkgs-fmt
@@ -31,8 +30,6 @@
     tealdeer
     croc
     just
-    # hurl
-    # nmap
     asciinema
     watch
 
@@ -68,6 +65,7 @@
 
     # Specialized tools
     uiua
+    uv
     nushell
     ruff
     ty
@@ -91,5 +89,8 @@
     colima
     docker
     tesseract
+    harper
+    brave
+    # ladybird
   ];
 }

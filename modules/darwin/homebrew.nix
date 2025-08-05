@@ -30,9 +30,10 @@
     ];
 
     casks = [
-      "brave-browser"
-      "slack"
+      "protonvpn"
+      "basictex"
       "zen-browser"
+      "ungoogled-chromium"
       "unity-hub"
       "logseq"
       "skim"
