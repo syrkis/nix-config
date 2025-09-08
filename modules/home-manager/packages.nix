@@ -6,15 +6,15 @@
     # Development tools
     typescript
     ripgrep
-    nodejs_22
-    clojure
+    nodejs_24
+    # clojure
     nixd
     nil
     nixpkgs-fmt
     nixfmt-classic
     biome
-    swig4
-    cmake
+    # swig4
+    # cmake
     docker
 
     # CLI utilities
@@ -27,9 +27,10 @@
     wget
     curl
     htop
+    btop
     tealdeer
     croc
-    just
+    # just
     asciinema
     watch
 
@@ -53,7 +54,7 @@
     (pass.withExtensions (ps: [ ps.pass-otp ]))
 
     # Communication
-    himalaya
+    # himalaya
 
     # System utilities
     starship
@@ -73,24 +74,23 @@
     # git stuff
     gh # GitHub CLI
     git-lfs # Large file support
-    # glab # GitLab CLI (if you use GitLab)
 
     # other
     rclone
     duti
-    # R
     awscli2
     lean4
     netlify-cli
     direnv
-    # zed-editor
-    gemini-cli
     wakapi
     colima
     docker
     tesseract
     harper
-    brave
-    # ladybird
+    tinymist
+    taskwarrior3
+    helix
+    imagemagick
+    julia-bin
   ];
 }

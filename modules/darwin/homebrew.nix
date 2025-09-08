@@ -25,26 +25,26 @@
       "zstd"
       "gettext"
       "openssl"
-      "tinymist"
       "ollama"
     ];
 
     casks = [
       "protonvpn"
       "basictex"
-      "zen-browser"
       "ungoogled-chromium"
       "unity-hub"
       "logseq"
       "skim"
       "obs"
-      "vagrant"
       "ghostty"
       "zotero"
       "fuse-t"
       "fuse-t-sshfs"
       "readest"
       "zed"
+      "beeper"
+      "discord"
+      "brave-browser"
     ];
   };
 }
