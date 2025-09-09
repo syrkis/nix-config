@@ -80,7 +80,6 @@
     duti
     awscli2
     lean4
-    netlify-cli
     direnv
     wakapi
     colima
@@ -91,6 +90,7 @@
     taskwarrior3
     helix
     imagemagick
+
     julia-bin
   ];
 }
