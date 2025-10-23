@@ -32,6 +32,7 @@
       "protonvpn"
       "basictex"
       "ungoogled-chromium"
+      "amethyst"
       "unity-hub"
       "logseq"
       "skim"

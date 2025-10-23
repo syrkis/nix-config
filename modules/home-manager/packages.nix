@@ -18,6 +18,7 @@
     docker
 
     # CLI utilities
+    yazi
     ripgrep
     fd
     fzf
@@ -29,7 +30,7 @@
     htop
     btop
     tealdeer
-    croc
+    # croc
     # just
     asciinema
     watch
@@ -65,9 +66,11 @@
     procs
 
     # Specialized tools
-    uiua
+    # uiua
     uv
     nushell
+    alacritty
+    tex-fmt
     ruff
     ty
 
@@ -78,7 +81,7 @@
     # other
     rclone
     duti
-    awscli2
+    # awscli2
     lean4
     direnv
     wakapi
@@ -87,10 +90,10 @@
     tesseract
     harper
     tinymist
-    taskwarrior3
     helix
     imagemagick
 
-    julia-bin
+    deno
+    just
   ];
 }

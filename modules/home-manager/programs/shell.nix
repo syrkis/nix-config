@@ -33,6 +33,7 @@
     # fish.shellAliases = {
     # cd = "z"; # Replace cd with zoxide
     # cat = "bat";
+    # t = "dstask";
     # less = "bat";
     # grep = "rg";
     # man = "tldr";
