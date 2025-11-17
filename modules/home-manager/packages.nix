@@ -5,14 +5,18 @@
 
     # Development tools
     typescript
+    dprint
     ripgrep
+    yaml-language-server
     nodejs_24
     # clojure
     nixd
     nil
+    # servo
     nixpkgs-fmt
     nixfmt-classic
     biome
+    steel
     # swig4
     # cmake
     docker
@@ -44,6 +48,7 @@
     # Documents & Publishing
     pandoc
     typst
+    ghostty-bin
     typstyle
     # hledger
     # hledger-ui
@@ -67,12 +72,12 @@
 
     # Specialized tools
     # uiua
-    uv
+    # uv
     nushell
     alacritty
     tex-fmt
     ruff
-    ty
+    # ty
 
     # git stuff
     gh # GitHub CLI
@@ -90,7 +95,7 @@
     tesseract
     harper
     tinymist
-    helix
+    # helix
     imagemagick
 
     deno

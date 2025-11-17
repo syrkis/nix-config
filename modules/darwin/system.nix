@@ -51,10 +51,10 @@
       tilesize = 48;
       persistent-apps = [
         { app = "System/Applications/Mail.app"; }
-        { app = "/Applications/Zed.app"; }
+        # { app = "/Applications/Zed.app"; }
         { app = "/Applications/Arc.app"; }
         { app = "/Applications/Zotero.app"; }
-        { app = "/Applications/Ghostty.app"; }
+        { app = "/Users/nobr/Applications/Home Manager Apps/Ghostty.app"; }
         { app = "/Applications/Readest.app"; }
         { app = "/Applications/Beeper Desktop.app"; }
         { app = "/System/Applications/System Settings.app"; }

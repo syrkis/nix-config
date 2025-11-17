@@ -1,8 +1,7 @@
+# modules/home-manager/programs/git.nix
 { ... }: {
   programs.git = {
     enable = true;
-    userName = "Noah Syrkis";
-    userEmail = "noah@syrkis.com";
 
     signing = {
       key = null;
@@ -10,24 +9,27 @@
       format = "ssh";
     };
 
-    extraConfig = {
-      # Core settings
+    settings = {
+      user = {
+        name = "Noah Syrkis";
+        email = "noah@syrkis.com";
+      };
+
       core = {
         editor = "nvim";
-        excludesfile = "~/.config/git/ignore"; # Explicitly set this
+        excludesfile = "~/.config/git/ignore";
         autocrlf = "input";
         ignorecase = false;
       };
 
-      # ... rest of your extraConfig
+      alias = {
+        st = "status --short";
+        # …
+      };
+
+      # move anything that lived under extraConfig here as well
     };
 
-    aliases = {
-      st = "status --short";
-      # ... rest of your aliases
-    };
-
-    # Global gitignore
     ignores = [
       ".DS_Store"
       ".DS_Store?"
