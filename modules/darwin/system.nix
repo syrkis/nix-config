@@ -7,6 +7,8 @@
   programs.zsh.enable = true;
   programs.fish.enable = true;
   environment.shells = with pkgs; [ zsh bash fish nushell ];
+  services.tailscale.enable = true;
+
 
   # Nix configuration
   nix.enable = false;
@@ -70,8 +72,8 @@
 
     NSGlobalDomain = {
       # Faster key repeat
-      KeyRepeat = 2;
-      InitialKeyRepeat = 15;
+      KeyRepeat = 1;
+      InitialKeyRepeat = 10;
 
       # Show file extensions
       AppleShowAllExtensions = true;

@@ -1,41 +1,54 @@
 { pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     # Rust toolchain
-    inputs.fenix.packages.${pkgs.system}.stable.toolchain
+    # inputs.fenix.packages.${pkgs.system}.stable.toolchain
 
     # Development tools
     typescript
     dprint
     ripgrep
+    tokei
+    kitty-img
+    graphviz
+    # tailscale
+    # epy
+    rumdl
+    bk
+    bun
+    zk
+    stack
+    marksman
     yaml-language-server
     nodejs_24
+    zig
     # clojure
+    lazygit
     nixd
     nil
     # servo
     nixpkgs-fmt
     nixfmt-classic
-    biome
+    # biome
     steel
     # swig4
     # cmake
     docker
 
     # CLI utilities
-    yazi
+    # yazi
     ripgrep
-    fd
-    fzf
+    # fd
+    # fzf
     eza
     zoxide
     sd
-    wget
+    # wget
     curl
-    htop
+    # htop
     btop
     tealdeer
-    # croc
-    # just
+    croc
+    just
     asciinema
     watch
 
@@ -66,7 +79,7 @@
     starship
     bat
     # ollama
-    # yazi
+    yazi
     dust
     procs
 
@@ -74,14 +87,16 @@
     # uiua
     # uv
     nushell
-    alacritty
+    # alacritty
     tex-fmt
-    ruff
+    texlive.combined.scheme-full
+    texlab
+    # ruff
     # ty
 
     # git stuff
     gh # GitHub CLI
-    git-lfs # Large file support
+    # git-lfs # Large file support
 
     # other
     rclone
@@ -90,15 +105,16 @@
     lean4
     direnv
     wakapi
+    wakatime-cli
     colima
     docker
     tesseract
     harper
-    tinymist
+    # tinymist
     # helix
     imagemagick
 
     deno
-    just
+
   ];
 }
