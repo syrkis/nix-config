@@ -12,6 +12,11 @@
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     # Declarative tap management
+    # cormacrelf-tap = {
+    # url = "github:cormacrelf/homebrew-tap";
+    # flake = false;
+    # };
+
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;

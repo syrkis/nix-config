@@ -1,10 +1,17 @@
 { ... }: {
   # Homebrew configuration - works with nix-homebrew
   homebrew = {
+    # global.brewfile = false;
+
     enable = true; # This is required for nix-darwin to manage packages!
     caskArgs.no_quarantine = true;
     global.brewfile = true;
 
+    onActivation = {
+      autoUpdate = false;
+      upgrade = false;
+      cleanup = "zap";
+    };
     brews = [
       "pkg-config"
       "watch"
@@ -12,7 +19,6 @@
       "fswatch"
       "pdf2svg"
       "cmake"
-      "gettext"
       "gmp"
       "hiredis"
       "jpeg-turbo"
@@ -25,25 +31,21 @@
       "zstd"
       "gettext"
       "openssl"
+      # "dark-notify"
       "ollama"
     ];
 
     casks = [
       "protonvpn"
-      # "basictex"
       "ungoogled-chromium"
       "hammerspoon"
-      # "amethyst"
-      # "unity-hub"
-      # "logseq"
       "skim"
       "obs"
-      # "ghostty"
+      "ghostty@tip"
       "zotero"
       "fuse-t"
       "fuse-t-sshfs"
       "readest"
-      # "zed"
       "beeper"
       "discord"
       "brave-browser"

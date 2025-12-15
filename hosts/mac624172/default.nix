@@ -13,16 +13,19 @@
     enable = true;
 
     # Apple Silicon Only: Also install Homebrew under the default Intel prefix for Rosetta 2
-    enableRosetta = true;
+    enableRosetta = false;
 
     # User owning the Homebrew prefix
     user = "nobr";
 
     # Optional: Declarative tap management
+
     taps = {
       "homebrew/homebrew-core" = inputs.homebrew-core;
       "homebrew/homebrew-cask" = inputs.homebrew-cask;
       "macos-fuse-t/homebrew-cask" = inputs.homebrew-fuse-t;
+
+      # "cormacrelf/tap" = inputs.cormacrelf-tap;
     };
 
     # Automatically migrate existing Homebrew installations
@@ -30,7 +33,7 @@
 
     # Optional: Enable fully-declarative tap management
     # With mutableTaps disabled, taps can no longer be added imperatively with `brew tap`
-    mutableTaps = false;
+    mutableTaps = true;
   };
 
   users.users.nobr = {

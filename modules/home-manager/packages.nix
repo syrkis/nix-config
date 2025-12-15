@@ -7,9 +7,14 @@
     typescript
     dprint
     ripgrep
+    passage
     tokei
+    dark-mode-notify
+    futhark
     kitty-img
+    rage
     graphviz
+    # calendula
     # tailscale
     # epy
     rumdl
@@ -29,7 +34,7 @@
     nixpkgs-fmt
     nixfmt-classic
     # biome
-    steel
+    # steel
     # swig4
     # cmake
     docker
@@ -61,7 +66,7 @@
     # Documents & Publishing
     pandoc
     typst
-    ghostty-bin
+    # ghostty-bin
     typstyle
     # hledger
     # hledger-ui
