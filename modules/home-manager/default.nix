@@ -1,4 +1,5 @@
-{ ... }: {
+{ pkgs, lib, ... }:
+{
   imports = [
     ./packages.nix
     ./programs/git.nix
@@ -6,8 +7,8 @@
     ./programs/shell.nix
   ];
 
-  # Link apps to /Applications on macOS
-  targets.darwin.currentHostDefaults = {
+  # macOS-only defaults
+  targets.darwin.currentHostDefaults = lib.mkIf pkgs.stdenv.isDarwin {
     "com.apple.controlcenter".BatteryShowPercentage = true;
   };
 
