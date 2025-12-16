@@ -74,7 +74,7 @@
 
     # Security & Privacy
     gnupg
-    pinentry_mac # Better GPG pinentry for macOS
+    # pinentry_mac # Better GPG pinentry for macOS
     (pass.withExtensions (ps: [ ps.pass-otp ]))
 
     # Communication
