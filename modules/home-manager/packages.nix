@@ -9,7 +9,7 @@
     ripgrep
     passage
     tokei
-    dark-mode-notify
+    # dark-mode-notify
     futhark
     kitty-img
     rage
