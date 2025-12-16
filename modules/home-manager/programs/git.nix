@@ -3,6 +3,12 @@
   programs.git = {
     enable = true;
 
+    extraConfig = {
+      credential = {
+        helper = "cache --timeout=28800"; # 8 hours
+      };
+    };
+
     signing = {
       key = null;
       signByDefault = false;
