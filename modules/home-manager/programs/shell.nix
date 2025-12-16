@@ -21,6 +21,8 @@
       enableZshIntegration = true;
     };
 
+    home.sessionPath = [ "$HOME/.local/bin" "$HOME/.cargo/bin" ];
+
     # Shell aliases
     bash.shellAliases = {
       cd = "z"; # Replace cd with zoxide

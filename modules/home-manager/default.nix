@@ -1,11 +1,5 @@
-{ pkgs, lib, ... }:
-{
-  imports = [
-    ./packages.nix
-    ./programs/git.nix
-    ./programs/neovim.nix
-    ./programs/shell.nix
-  ];
+{ pkgs, lib, ... }: {
+  imports = [ ./packages.nix ./programs/git.nix ./programs/shell.nix ];
 
   # macOS-only defaults
   targets.darwin.currentHostDefaults = lib.mkIf pkgs.stdenv.isDarwin {
