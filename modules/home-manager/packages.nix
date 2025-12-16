@@ -105,15 +105,15 @@
 
     # other
     rclone
-    duti
+    # duti
     # awscli2
     lean4
     direnv
     wakapi
     wakatime-cli
-    colima
+    # colima
     docker
-    tesseract
+    # tesseract
     harper
     # tinymist
     # helix
