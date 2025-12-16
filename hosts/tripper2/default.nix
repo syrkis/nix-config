@@ -1,19 +1,15 @@
-{ inputs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports = [
-    inputs.home-manager.nixosModules.home-manager
+    ../../modules/home-manager
   ];
 
-  # Home Manager wiring
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
+  home.username = "nobr";
+  home.homeDirectory = "/home/nobr";
+  home.stateVersion = "23.11";
 
-    users.nobr = {
-      imports = [ ../../modules/home-manager ];
-    };
+  programs.home-manager.enable = true;
 
-    extraSpecialArgs = { inherit inputs; };
-    backupFileExtension = "backup";
-  };
+  # optional: put host-specific packages here
+  # home.packages = with pkgs; [ ... ];
 }
