@@ -9,6 +9,7 @@
     ripgrep
     passage
     tokei
+    bottom
     # dark-mode-notify
     futhark
     kitty-img
