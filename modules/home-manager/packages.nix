@@ -6,10 +6,14 @@
     # Development tools
     typescript
     dprint
+    codex
     ripgrep
     passage
     tokei
     bottom
+    libcxx
+
+    # libcxxabi
     # dark-mode-notify
     futhark
     kitty-img
@@ -108,7 +112,10 @@
     rclone
     # duti
     # awscli2
-    lean4
+    # lean4
+    elan
+    clang
+
     direnv
     wakapi
     wakatime-cli
