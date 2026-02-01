@@ -31,8 +31,7 @@
       "zstd"
       "gettext"
       "openssl"
-      # "dark-notify"
-      "ollama"
+      # "ollama"
     ];
 
     casks = [
@@ -41,7 +40,6 @@
       "hammerspoon"
       "skim"
       "obs"
-      "ghostty@tip"
       "zotero"
       "fuse-t"
       "fuse-t-sshfs"

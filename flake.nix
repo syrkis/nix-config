@@ -2,7 +2,8 @@
   description = "learning nix";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/master";
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -30,10 +31,8 @@
   };
 
   outputs = inputs:
-    let
-      mkPkgs = system: import inputs.nixpkgs { inherit system; };
-    in
-    {
+    let mkPkgs = system: import inputs.nixpkgs { inherit system; };
+    in {
       darwinConfigurations = {
         c23 = inputs.darwin.lib.darwinSystem {
           system = "aarch64-darwin";

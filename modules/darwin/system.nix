@@ -6,7 +6,7 @@
   # Shell configuration
   programs.zsh.enable = true;
   programs.fish.enable = true;
-  environment.shells = with pkgs; [ zsh bash fish nushell ];
+  environment.shells = with pkgs; [ zsh bash fish ];
   services.tailscale.enable = true;
 
   # Nix configuration
@@ -27,7 +27,7 @@
 
   # System packages and paths
   environment = {
-    systemPackages = with pkgs; [ coreutils nushell ];
+    systemPackages = with pkgs; [ coreutils ];
     systemPath = [ "/opt/homebrew/bin/" ];
     pathsToLink = [ "/Applications" ];
     variables = {
