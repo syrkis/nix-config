@@ -1,5 +1,6 @@
 # modules/home-manager/programs/git.nix
-{ ... }: {
+{ ... }:
+{
   programs.git = {
     enable = true;
 
@@ -29,6 +30,13 @@
       alias = {
         st = "status --short";
         # …
+      };
+
+      url."git@github.com:" = {
+        insteadOf = [
+          "https://github.com/"
+          "http://github.com/"
+        ];
       };
 
       # move anything that lived under extraConfig here as well

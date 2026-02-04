@@ -30,9 +30,12 @@
     };
   };
 
-  outputs = inputs:
-    let mkPkgs = system: import inputs.nixpkgs { inherit system; };
-    in {
+  outputs =
+    inputs:
+    let
+      mkPkgs = system: import inputs.nixpkgs { inherit system; };
+    in
+    {
       darwinConfigurations = {
         c23 = inputs.darwin.lib.darwinSystem {
           system = "aarch64-darwin";

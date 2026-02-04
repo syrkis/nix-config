@@ -1,4 +1,5 @@
-{ ... }: {
+{ ... }:
+{
   # Homebrew configuration - works with nix-homebrew
   homebrew = {
     # global.brewfile = false;
@@ -44,6 +45,7 @@
       "fuse-t"
       "fuse-t-sshfs"
       "readest"
+      "racket"
       "beeper"
       "discord"
       "brave-browser"

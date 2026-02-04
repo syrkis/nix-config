@@ -1,13 +1,20 @@
 { pkgs, inputs, ... }:
 {
   home.packages = with pkgs; [
-    # Rust toolchain
     # inputs.fenix.packages.${pkgs.system}.stable.toolchai
     typescript
     dprint
+    autoconf
+    automake
+    libtool
+    pkg-config
+    watchexec
     sipexer
     dprint
+    # llpp
     biome
+    # poppler
+    # racket
     tuios
     ffmpeg
     code-minimap
@@ -17,6 +24,8 @@
     passage
     tokei
     bottom
+    # mupdf
+    # zathura
     libcxx
     futhark
     kitty-img
