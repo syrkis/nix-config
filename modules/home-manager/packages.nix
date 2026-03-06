@@ -3,13 +3,27 @@
   home.packages = with pkgs; [
     # inputs.fenix.packages.${pkgs.system}.stable.toolchai
     typescript
+    # qutebrowser
     dprint
+    wget
+    opencode
     autoconf
     automake
+    sioyek
+    aichat
+    glow
+    astro-language-server
     libtool
+    yazi
+    go
+    himalaya
+    mullvad
+    # mullvad-browser
+    aerc
     pkg-config
     watchexec
     sipexer
+    anki
     dprint
     # llpp
     biome
@@ -78,7 +92,7 @@
     harper
     # tinymist
     imagemagick
-    deno
+    # deno
 
   ];
 }

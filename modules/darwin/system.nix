@@ -1,4 +1,5 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   # System configuration
   # primaryUser is set in each host configuration
   system.stateVersion = 4;
@@ -6,7 +7,11 @@
   # Shell configuration
   programs.zsh.enable = true;
   programs.fish.enable = true;
-  environment.shells = with pkgs; [ zsh bash fish ];
+  environment.shells = with pkgs; [
+    zsh
+    bash
+    fish
+  ];
   services.tailscale.enable = true;
 
   # Nix configuration
@@ -14,13 +19,18 @@
 
   # Nix configuration
   nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
     trusted-public-keys = [
       "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
       "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
     ];
-    substituters =
-      [ "https://cache.nixos.org/" "https://determinate.cachix.org" ];
+    substituters = [
+      "https://cache.nixos.org/"
+      "https://determinate.cachix.org"
+    ];
     allow-dirty = true;
   };
   documentation.enable = false;
@@ -31,9 +41,9 @@
     systemPath = [ "/opt/homebrew/bin/" ];
     pathsToLink = [ "/Applications" ];
     variables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      GIT_EDITOR = "nvim";
+      EDITOR = "hx";
+      VISUAL = "hx";
+      GIT_EDITOR = "hx";
     };
   };
 
@@ -51,14 +61,12 @@
       show-recents = false;
       tilesize = 48;
       persistent-apps = [
-        {
-          app = "System/Applications/Mail.app";
-        }
-        # { app = "/Applications/Zed.app"; }
-        { app = "/Applications/Arc.app"; }
-        { app = "/Applications/Zotero.app"; }
+        { app = "System/Applications/Mail.app"; }
         { app = "/Applications/Ghostty.app"; }
+        { app = "/Applications/Zen.app"; }
+        { app = "/Applications/Zotero.app"; }
         { app = "/Applications/Readest.app"; }
+        { app = "/Users/nobr/Applications/Home Manager Apps/sioyek.app"; }
         { app = "/Applications/Beeper Desktop.app"; }
         { app = "/System/Applications/System Settings.app"; }
       ];

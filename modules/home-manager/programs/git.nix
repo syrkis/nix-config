@@ -17,7 +17,7 @@
       };
 
       core = {
-        editor = "nvim";
+        editor = "hx";
         excludesfile = "~/.config/git/ignore";
         autocrlf = "input";
         ignorecase = false;
@@ -32,12 +32,12 @@
         # …
       };
 
-      url."git@github.com:" = {
-        insteadOf = [
-          "https://github.com/"
-          "http://github.com/"
-        ];
-      };
+      # url."git@github.com:" = {
+      # insteadOf = [
+      # "https://github.com/"
+      # "http://github.com/"
+      # ];
+      # };
 
       # move anything that lived under extraConfig here as well
     };
