@@ -4,27 +4,41 @@
     # inputs.fenix.packages.${pkgs.system}.stable.toolchai
     typescript
     # qutebrowser
+    # tabnine
+    iamb
+    fzf
+    # pi-coding-agent
     dprint
     wget
-    opencode
+    # opencode
     autoconf
+    chafa # figs in terminal
+    sqlfluff
+    mpv # video in terminal
+    postgres-language-server
+    # postgres-language-serve
+    devenv
+    chezmoi
     automake
     sioyek
+    # openra
+    # logseq
     aichat
     glow
     astro-language-server
     libtool
     yazi
+    # obsidian
     go
     himalaya
-    mullvad
+    # mullvad
     # mullvad-browser
     aerc
     pkg-config
     watchexec
     sipexer
-    anki
-    dprint
+    # anki-bin
+    # dprint
     # llpp
     biome
     # poppler
@@ -32,7 +46,7 @@
     tuios
     ffmpeg
     code-minimap
-    codex
+    # codex
     ripgrep
     jujutsu
     passage
@@ -60,6 +74,7 @@
     nil
     nixpkgs-fmt
     nixfmt
+    colima
     docker
     ripgrep
     eza
@@ -92,6 +107,9 @@
     harper
     # tinymist
     imagemagick
+    # postgresql_18
+    # postgresql18Packages.postgis
+    # osm2pgsql
     # deno
 
   ];

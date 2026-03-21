@@ -12,7 +12,18 @@
     bash
     fish
   ];
-  services.tailscale.enable = true;
+  # services.tailscale.enable = true;
+  # services.postgresql.enable = true;
+  # services.postgresql = {
+  # enable = true;
+  # package = pkgs.postgresql_18;
+  # dataDir = "/Users/nobr/postgres/18";
+  # };
+  # services.postgresql = {
+  # enable = true;
+  # package = pkgs.postgresql_18;
+  # ensureDatabases = [ "gisdb" ];
+  # };
 
   # Nix configuration
   nix.enable = false;
