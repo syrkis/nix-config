@@ -14,6 +14,7 @@
       shellInit = ''
         set -gx EDITOR hx
         set -gx VISUAL hx
+        eval "$(direnv hook bash)"
       '';
       interactiveShellInit = ''
         bind \\cz 'fg 2>/dev/null; commandline -f repaint'

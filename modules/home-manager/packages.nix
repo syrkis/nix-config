@@ -5,12 +5,13 @@
     typescript
     # qutebrowser
     # tabnine
-    iamb
+    # iamb
     fzf
     # pi-coding-agent
     dprint
     wget
     # opencode
+    # jellyfin
     autoconf
     chafa # figs in terminal
     sqlfluff
@@ -33,7 +34,7 @@
     himalaya
     # mullvad
     # mullvad-browser
-    aerc
+    # aerc
     pkg-config
     watchexec
     sipexer
