@@ -42,6 +42,10 @@
       "https://cache.nixos.org/"
       "https://determinate.cachix.org"
     ];
+    trusted-users = [
+      "root"
+      "nobr"
+    ];
     allow-dirty = true;
   };
   documentation.enable = false;

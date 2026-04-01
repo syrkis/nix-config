@@ -9,7 +9,10 @@
     fzf
     # pi-coding-agent
     dprint
+    tailscale
+    utm
     wget
+    # tailscale
     # opencode
     # jellyfin
     autoconf
@@ -108,7 +111,7 @@
     harper
     # tinymist
     imagemagick
-    # postgresql_18
+    postgresql_18
     # postgresql18Packages.postgis
     # osm2pgsql
     # deno
