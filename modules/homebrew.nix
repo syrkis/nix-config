@@ -1,10 +1,7 @@
-{ ... }:
+{ inputs, ... }:
 {
-  # Homebrew configuration - works with nix-homebrew
   homebrew = {
-    # global.brewfile = false;
-
-    enable = true; # This is required for nix-darwin to manage packages!
+    enable = true;
     caskArgs.no_quarantine = true;
     global.brewfile = true;
 
@@ -13,6 +10,7 @@
       upgrade = false;
       cleanup = "zap";
     };
+
     brews = [
       "pkg-config"
       "watch"
@@ -32,7 +30,6 @@
       "zstd"
       "gettext"
       "openssl"
-      # "ollama"
     ];
 
     casks = [
@@ -51,12 +48,25 @@
       "tailscale"
       "fuse-t-sshfs"
       "readest"
-      # "nvidia-geforce-now"
       "zen"
-      # "racket"
       "beeper"
       "discord"
       "brave-browser"
     ];
+  };
+
+  nix-homebrew = {
+    enable = true;
+    enableRosetta = false;
+    user = "nobr";
+
+    taps = {
+      "homebrew/homebrew-core" = inputs.homebrew-core;
+      "homebrew/homebrew-cask" = inputs.homebrew-cask;
+      "macos-fuse-t/homebrew-cask" = inputs.homebrew-fuse-t;
+    };
+
+    autoMigrate = true;
+    mutableTaps = true;
   };
 }

@@ -2,8 +2,6 @@
   description = "learning nix";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/master";
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
     home-manager.url = "github:nix-community/home-manager/master";
@@ -14,52 +12,61 @@
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    # Brew (mac-only; safe to keep as inputs)
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
     homebrew-core = {
       url = "github:homebrew/homebrew-core";
       flake = false;
     };
+
     homebrew-cask = {
       url = "github:homebrew/homebrew-cask";
       flake = false;
     };
+
     homebrew-fuse-t = {
       url = "github:macos-fuse-t/homebrew-cask";
       flake = false;
     };
   };
 
-  outputs =
-    inputs:
+  outputs = inputs@{
+    nixpkgs,
+    darwin,
+    home-manager,
+    ...
+  }:
     let
-      mkPkgs = system: import inputs.nixpkgs { inherit system; };
+      mkPkgs = system: import nixpkgs { inherit system; };
+
+      mkDarwin = host:
+        darwin.lib.darwinSystem {
+          system = "aarch64-darwin";
+          pkgs = mkPkgs "aarch64-darwin";
+          modules = [
+            ./hosts/${host}.nix
+            inputs.nix-homebrew.darwinModules.nix-homebrew
+          ];
+          specialArgs = { inherit inputs; };
+        };
+
+      mkHome = host: system:
+        home-manager.lib.homeManagerConfiguration {
+          pkgs = mkPkgs system;
+          modules = [
+            ./hosts/${host}.nix
+          ];
+          extraSpecialArgs = { inherit inputs; };
+        };
     in
     {
       darwinConfigurations = {
-        c23 = inputs.darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          pkgs = mkPkgs "aarch64-darwin";
-          modules = [ ./hosts/c23 ];
-          specialArgs = { inherit inputs; };
-        };
-
-        mac624172 = inputs.darwin.lib.darwinSystem {
-          system = "aarch64-darwin";
-          pkgs = mkPkgs "aarch64-darwin";
-          modules = [ ./hosts/mac624172 ];
-          specialArgs = { inherit inputs; };
-        };
+        c23 = mkDarwin "c23";
+        mac624172 = mkDarwin "mac624172";
       };
 
-      # Ubuntu / Home Manager (Option 2)
       homeConfigurations = {
-        tripper2 = inputs.home-manager.lib.homeManagerConfiguration {
-          pkgs = mkPkgs "x86_64-linux"; # change to "aarch64-linux" if needed
-          modules = [ ./hosts/tripper2 ];
-          extraSpecialArgs = { inherit inputs; };
-        };
+        tripper2 = mkHome "tripper2" "x86_64-linux";
       };
     };
 }
