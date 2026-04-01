@@ -50,6 +50,10 @@
     ];
 
     allow-dirty = true;
+
+    builders = [
+      "ssh-ng://root@95.216.155.40 x86_64-linux - 4 1"
+    ];
   };
 
   documentation.enable = false;
