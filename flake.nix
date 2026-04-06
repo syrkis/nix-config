@@ -7,10 +7,10 @@
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    fenix.url = "github:nix-community/fenix";
-
     darwin.url = "github:lnl7/nix-darwin";
     darwin.inputs.nixpkgs.follows = "nixpkgs";
+
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/3";
 
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
 
@@ -30,12 +30,7 @@
     };
   };
 
-  outputs = inputs@{
-    nixpkgs,
-    darwin,
-    home-manager,
-    ...
-  }:
+  outputs = inputs@{ nixpkgs, darwin, home-manager, determinate, ... }:
     let
       mkPkgs = system: import nixpkgs { inherit system; };
 
@@ -44,8 +39,9 @@
           system = "aarch64-darwin";
           pkgs = mkPkgs "aarch64-darwin";
           modules = [
-            ./hosts/${host}.nix
+            inputs.determinate.darwinModules.default
             inputs.nix-homebrew.darwinModules.nix-homebrew
+            ./hosts/${host}.nix
           ];
           specialArgs = { inherit inputs; };
         };

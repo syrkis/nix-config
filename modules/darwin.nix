@@ -28,32 +28,38 @@
 
   nix.enable = false;
 
-  nix.settings = {
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
+  determinateNix = {
+    enable = true;
 
-    trusted-public-keys = [
-      "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-      "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
-    ];
+    customSettings = {
+      extra-experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
 
-    substituters = [
-      "https://cache.nixos.org/"
-      "https://determinate.cachix.org"
-    ];
+      trusted-public-keys = [
+        "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
+      ];
 
-    trusted-users = [
-      "root"
-      "nobr"
-    ];
+      substituters = [
+        "https://cache.nixos.org/"
+        "https://determinate.cachix.org"
+      ];
 
-    allow-dirty = true;
+      trusted-users = [
+        "root"
+        "nobr"
+      ];
 
-    builders = [
-      "ssh-ng://root@95.216.155.40 x86_64-linux - 4 1"
-    ];
+      builders = [
+        "ssh-ng://root@95.216.155.40 x86_64-linux - 4 1"
+      ];
+
+      builders-use-substitutes = true;
+
+      allow-dirty = true;
+    };
   };
 
   documentation.enable = false;

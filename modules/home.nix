@@ -12,34 +12,34 @@
   ];
 
   home.packages = with pkgs; [
-    aichat
     asciinema
     astro-language-server
     autoconf
     automake
     bat
-    biome
+    # biome
     bk
-    bottom
+    # bottom
+    google-cloud-sdk
     btop
     bun
     chafa
     chezmoi
-    clang
+    # clang
     code-minimap
     colima
-    croc
+    # croc
     curl
     devenv
     direnv
-    docker
-    dprint
-    dust
-    elan
+    # docker
+    # dprint
+    # dust
+    # elan
     eza
     ffmpeg
     fish
-    futhark
+    # futhark
     fzf
     gnupg
     glow
@@ -51,43 +51,43 @@
     just
     jujutsu
     kitty-img
-    lazygit
-    libcxx
-    libtool
+    # lazygit
+    # libcxx
+    # libtool
     marksman
-    mpv
+    # mpv
     nil
     nixd
     nixfmt
     nixpkgs-fmt
     nodejs_24
     pandoc
-    passage
+    # passage
     (pass.withExtensions (ps: [ ps.pass-otp ]))
     pkg-config
     postgresql_18
     postgres-language-server
-    rage
+    # rage
     rclone
     ripgrep
-    rumdl
-    sd
+    # rumdl
+    # sd
     sioyek
     sipexer
     sqlfluff
-    stack
+    # stack
     starship
     tailscale
     tealdeer
     tex-fmt
     texlab
     texlive.combined.scheme-full
-    tokei
-    tuios
+    # tokei
+    # tuios
     typst
     typstyle
-    typescript
-    utm
+    # typescript
+    # utm
     wakapi
     wakatime-cli
     watch
@@ -107,35 +107,35 @@
     '';
   };
 
-programs.fish = {
-  enable = true;
+  programs.fish = {
+    enable = true;
 
-  shellInit = ''
-    set -gx EDITOR hx
-    set -gx VISUAL hx
-  '';
+    shellInit = ''
+      set -gx EDITOR hx
+      set -gx VISUAL hx
+    '';
 
-  interactiveShellInit = ''
-    zoxide init fish | source
-    bind \cz 'fg 2>/dev/null; commandline -f repaint'
-  '';
+    interactiveShellInit = ''
+      zoxide init fish | source
+      bind \cz 'fg 2>/dev/null; commandline -f repaint'
+    '';
 
-  shellAliases = {
-    eza = "eza --icons auto --git";
-    la = "eza -a";
-    ll = "eza -l";
-    lla = "eza -la";
-    ls = "eza";
-    lt = "eza --tree";
+    shellAliases = {
+      eza = "eza --icons auto --git";
+      la = "eza -a";
+      ll = "eza -l";
+      lla = "eza -la";
+      ls = "eza";
+      lt = "eza --tree";
+    };
   };
-};
 
-programs.zoxide = {
-  enable = true;
-  enableFishIntegration = false;
-  enableZshIntegration = true;
-  options = [ "--cmd cd" ];
-};
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = false;
+    enableZshIntegration = true;
+    options = [ "--cmd cd" ];
+  };
 
   programs.git = {
     enable = true;
@@ -189,7 +189,6 @@ programs.zoxide = {
   programs.starship.enable = true;
   programs.zellij.enable = true;
   programs.bat.enable = true;
-
 
   programs.direnv = {
     enable = true;
