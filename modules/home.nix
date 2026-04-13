@@ -21,6 +21,7 @@
     bk
     # bottom
     google-cloud-sdk
+helix
     btop
     bun
     chafa

@@ -64,5 +64,9 @@
       homeConfigurations = {
         tripper2 = mkHome "tripper2" "x86_64-linux";
       };
+
+      homeConfigurations = {
+        vaporwave = mkHome "vaporwave" "x86_64-linux";
+      };
     };
 }
