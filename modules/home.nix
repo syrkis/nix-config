@@ -13,19 +13,26 @@
 
   home.packages = with pkgs; [
     asciinema
+    kitty
+    viu
     astro-language-server
+    uv
     autoconf
     automake
     bat
     # biome
+    helix
+    timg
     bk
     # bottom
     google-cloud-sdk
-helix
+    helix
     btop
     bun
     chafa
     chezmoi
+    codex
+    opencode
     # clang
     code-minimap
     colima
