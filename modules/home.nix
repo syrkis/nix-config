@@ -121,10 +121,8 @@
     enableZshIntegration = true;
     enableScDaemon = true;
     enableSshSupport = false;
-    pinentry.package = pkgs.pinentry_mac;
-    # services.gpg-agent.pinentry.package
-
   };
+  services.gpg-agent.pinentry.package = pkgs.lib.mkIf pkgs.stdenv.isDarwin pkgs.pinentry_mac;
 
   programs.bash.enable = true;
   programs.zsh = {
