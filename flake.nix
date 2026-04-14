@@ -30,11 +30,19 @@
     };
   };
 
-  outputs = inputs@{ nixpkgs, darwin, home-manager, determinate, ... }:
+  outputs =
+    inputs@{
+      nixpkgs,
+      darwin,
+      home-manager,
+      determinate,
+      ...
+    }:
     let
       mkPkgs = system: import nixpkgs { inherit system; };
 
-      mkDarwin = host:
+      mkDarwin =
+        host:
         darwin.lib.darwinSystem {
           system = "aarch64-darwin";
           pkgs = mkPkgs "aarch64-darwin";
@@ -46,7 +54,8 @@
           specialArgs = { inherit inputs; };
         };
 
-      mkHome = host: system:
+      mkHome =
+        host: system:
         home-manager.lib.homeManagerConfiguration {
           pkgs = mkPkgs system;
           modules = [
@@ -63,9 +72,6 @@
 
       homeConfigurations = {
         tripper2 = mkHome "tripper2" "x86_64-linux";
-      };
-
-      homeConfigurations = {
         vaporwave = mkHome "vaporwave" "x86_64-linux";
       };
     };
