@@ -25,9 +25,11 @@
     uv
     autoconf
     automake
+    syncthing
     bat
     # biome
     helix
+    # yubikey
     timg
     bk
     # bottom
