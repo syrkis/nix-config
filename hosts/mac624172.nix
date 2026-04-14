@@ -5,7 +5,7 @@ in
 {
   imports = [
     ../modules/darwin.nix
-#    ../modules/homebrew.nix
+    #    ../modules/homebrew.nix
     inputs.home-manager.darwinModules.home-manager
   ];
 
@@ -16,7 +16,18 @@ in
   users.users.${username} = {
     name = username;
     home = "/Users/${username}";
-  shell = pkgs.fish;
+    shell = pkgs.fish;
+  };
+
+  launchd.user.agents.syncthing = {
+    serviceConfig = {
+      ProgramArguments = [
+        "${pkgs.syncthing}/bin/syncthing"
+        "--no-browser"
+      ];
+      KeepAlive = true;
+      RunAtLoad = true;
+    };
   };
 
   home-manager = {
