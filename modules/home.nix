@@ -14,6 +14,12 @@
   home.packages = with pkgs; [
     asciinema
     kitty
+    gnupg
+    # pinentry-mac
+    yubikey-manager
+    openssh
+    libfido2
+    gopass
     viu
     astro-language-server
     uv
@@ -71,7 +77,7 @@
     nodejs_24
     pandoc
     # passage
-    (pass.withExtensions (ps: [ ps.pass-otp ]))
+    # (pass.withExtensions (ps: [ ps.pass-otp ]))
     pkg-config
     postgresql_18
     postgres-language-server
@@ -107,6 +113,17 @@
     zk
   ];
 
+  services.gpg-agent = {
+    enable = true;
+    enableFishIntegration = true;
+    enableZshIntegration = true;
+    enableScDaemon = true;
+    enableSshSupport = false;
+    pinentry.package = pkgs.pinentry_mac;
+    # services.gpg-agent.pinentry.package
+
+  };
+
   programs.bash.enable = true;
   programs.zsh = {
     enable = true;
@@ -135,6 +152,8 @@
       lla = "eza -la";
       ls = "eza";
       lt = "eza --tree";
+      # optional transition alias
+      pass = "gopass";
     };
   };
 
