@@ -13,8 +13,12 @@
 
   home.packages = with pkgs; [
     asciinema
-    kitty
+    # kitty
     gnupg
+    # lsp-ai
+    # llama-cpp
+    ollama
+    # vllm
     # pinentry-mac
     yubikey-manager
     openssh
@@ -39,7 +43,7 @@
     bun
     chafa
     chezmoi
-    codex
+    # codex
     opencode
     # clang
     code-minimap
@@ -47,8 +51,8 @@
     # croc
     curl
     devenv
-    direnv
-    # docker
+    # direnv
+    docker
     # dprint
     # dust
     # elan

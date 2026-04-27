@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/master";
 
     home-manager.url = "github:nix-community/home-manager/master";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
@@ -39,8 +40,18 @@
       ...
     }:
     let
-      mkPkgs = system: import nixpkgs { inherit system; };
-
+      mkPkgs =
+        system:
+        import nixpkgs {
+          inherit system;
+          overlays = [
+            (final: prev: {
+              direnv = prev.direnv.overrideAttrs (_: {
+                doCheck = false;
+              });
+            })
+          ];
+        };
       mkDarwin =
         host:
         darwin.lib.darwinSystem {

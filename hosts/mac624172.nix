@@ -19,6 +19,41 @@ in
     shell = pkgs.fish;
   };
 
+  launchd.user.agents.colima = {
+    serviceConfig = {
+      ProgramArguments = [
+        "${pkgs.colima}/bin/colima"
+        "start"
+        "--foreground"
+      ];
+      KeepAlive = true;
+      RunAtLoad = true;
+    };
+  };
+
+  # launchd.user.agents.tailscale = {
+  #   serviceConfig = {
+  #     ProgramArguments = [
+  #       "${pkgs.tailscale}/bin/tailscaled"
+  #     ];
+  #     KeepAlive = true;
+  #     RunAtLoad = true;
+  #   };
+  # };
+
+  launchd.user.agents.ollama = {
+    serviceConfig = {
+      ProgramArguments = [
+        "${pkgs.ollama}/bin/ollama"
+        "serve"
+      ];
+      KeepAlive = true;
+      RunAtLoad = true;
+      StandardOutPath = "/tmp/ollama.log";
+      StandardErrorPath = "/tmp/ollama.err.log";
+    };
+  };
+
   launchd.user.agents.syncthing = {
     serviceConfig = {
       ProgramArguments = [

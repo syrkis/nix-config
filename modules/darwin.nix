@@ -39,12 +39,12 @@
 
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
-        "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
+        # "determinate.cachix.org-1:yiS82z6lVEjdGQphjQxBb22c7lbqhYrxvlrMYmCB8hc="
       ];
 
       substituters = [
         "https://cache.nixos.org/"
-        "https://determinate.cachix.org"
+        # "https://determinate.cachix.org"
       ];
 
       trusted-users = [
@@ -52,11 +52,11 @@
         "nobr"
       ];
 
-      builders = [
-        "ssh-ng://root@95.216.155.40 x86_64-linux - 4 1"
-      ];
+      # builders = [
+      # "ssh-ng://root@95.216.155.40 x86_64-linux - 4 1"
+      # ];
 
-      builders-use-substitutes = true;
+      # builders-use-substitutes = true;
 
       allow-dirty = true;
     };
