@@ -10,6 +10,7 @@
       zsh
       bash
       fish
+      nushell
     ];
 
     systemPackages = with pkgs; [
@@ -76,7 +77,7 @@
       tilesize = 48;
       persistent-apps = [
         { app = "System/Applications/Mail.app"; }
-        { app = "/Applications/Ghostty.app"; }
+        { app = "/Users/nobr/Applications/Home\ Manager\ Apps/Ghostty.app"; }
         { app = "/Applications/Zen.app"; }
         { app = "/Applications/Zotero.app"; }
         { app = "/Applications/Readest.app"; }

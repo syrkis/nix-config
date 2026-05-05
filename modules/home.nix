@@ -15,14 +15,20 @@
     asciinema
     # kitty
     gnupg
+    # vault
     # lsp-ai
     # llama-cpp
+    tesseract
+    aerc
     ollama
+    nushell
     # vllm
+    chawan
     # pinentry-mac
     yubikey-manager
     openssh
     libfido2
+    hut
     gopass
     viu
     astro-language-server
@@ -31,12 +37,11 @@
     automake
     syncthing
     bat
-    # biome
+    ghostty-bin
     helix
-    # yubikey
     timg
     bk
-    # bottom
+    bottom
     google-cloud-sdk
     helix
     btop
@@ -44,7 +49,7 @@
     chafa
     chezmoi
     # codex
-    opencode
+    # opencode
     # clang
     code-minimap
     colima
@@ -140,6 +145,7 @@
     enable = true;
 
     shellInit = ''
+      printf '\e[?2031h'
       set -gx EDITOR hx
       set -gx VISUAL hx
     '';
@@ -158,6 +164,7 @@
       lt = "eza --tree";
       # optional transition alias
       pass = "gopass";
+      cd = "z";
     };
   };
 
