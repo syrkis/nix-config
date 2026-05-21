@@ -15,12 +15,14 @@
     asciinema
     # kitty
     gnupg
+    # pihole # only on linux
     # vault
     # lsp-ai
     # llama-cpp
     tesseract
     aerc
     ollama
+    mdfried
     nushell
     # vllm
     chawan
@@ -37,7 +39,7 @@
     automake
     syncthing
     bat
-    ghostty-bin
+    # ghostty-bin
     helix
     timg
     bk
