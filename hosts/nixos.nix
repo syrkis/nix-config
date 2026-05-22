@@ -9,7 +9,7 @@ let
 in
 {
   imports = [
-    ../modules/home.nix
+    /home/${username}/nix-config/modules/home.nix
   ];
 
   home = {
