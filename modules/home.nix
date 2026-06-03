@@ -19,8 +19,13 @@
     # vault
     # lsp-ai
     # llama-cpp
+    # wrangler
     tesseract
     aerc
+    khard
+    rumdl
+    gifsicle
+    simple-completion-language-server
     ollama
     mdfried
     nushell

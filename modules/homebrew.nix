@@ -48,6 +48,7 @@
       "tailscale"
       "fuse-t-sshfs"
       "readest"
+      "zed"
       "zen"
       "beeper"
       "discord"
