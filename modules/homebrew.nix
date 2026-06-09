@@ -6,8 +6,10 @@
     global.brewfile = true;
 
     onActivation = {
+      # Keep updates pinned/reviewable via flake.lock instead of `brew update`.
       autoUpdate = false;
-      upgrade = false;
+      # Upgrade installed brews/casks to the versions from the pinned taps on rebuild.
+      upgrade = true;
       cleanup = "zap";
     };
 
@@ -36,19 +38,19 @@
       "protonvpn"
       "ungoogled-chromium"
       "signal"
-      "hammerspoon"
-      "skim"
-      "obsidian"
+      # "hammerspoon"
+      # "skim"
+      # "obsidian"
       "whatsapp"
       "obs"
       "zotero"
-      "fuse-t"
-      "anki"
-      "openra"
-      "tailscale"
-      "fuse-t-sshfs"
+      # "fuse-t"
+      # "anki"
+      # "openra"
+      "tailscale-app"
+      # "fuse-t-sshfs"
       "readest"
-      "zed"
+      # "zed"
       "zen"
       "beeper"
       "discord"
@@ -68,6 +70,6 @@
     };
 
     autoMigrate = true;
-    mutableTaps = true;
+    mutableTaps = false;
   };
 }

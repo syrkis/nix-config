@@ -5,7 +5,7 @@ in
 {
   imports = [
     ../modules/darwin.nix
-    #    ../modules/homebrew.nix
+    ../modules/homebrew.nix
     inputs.home-manager.darwinModules.home-manager
   ];
 
@@ -41,18 +41,18 @@ in
   #   };
   # };
 
-  launchd.user.agents.ollama = {
-    serviceConfig = {
-      ProgramArguments = [
-        "${pkgs.ollama}/bin/ollama"
-        "serve"
-      ];
-      KeepAlive = true;
-      RunAtLoad = true;
-      StandardOutPath = "/tmp/ollama.log";
-      StandardErrorPath = "/tmp/ollama.err.log";
-    };
-  };
+  # launchd.user.agents.ollama = {
+  #   serviceConfig = {
+  #     ProgramArguments = [
+  #       "${pkgs.ollama}/bin/ollama"
+  #       "serve"
+  #     ];
+  #     KeepAlive = true;
+  #     RunAtLoad = true;
+  #     StandardOutPath = "/tmp/ollama.log";
+  #     StandardErrorPath = "/tmp/ollama.err.log";
+  #   };
+  # };
 
   launchd.user.agents.syncthing = {
     serviceConfig = {

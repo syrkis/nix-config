@@ -21,12 +21,17 @@
     # llama-cpp
     # wrangler
     tesseract
-    aerc
+    (pkgs.aerc.override {
+      notmuch = pkgs.notmuch.override {
+        withEmacs = false;
+      };
+    })
     khard
+    # emacs31
     rumdl
     gifsicle
     simple-completion-language-server
-    ollama
+    # ollama
     mdfried
     nushell
     # vllm

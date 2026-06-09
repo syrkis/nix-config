@@ -33,7 +33,7 @@
     enable = true;
 
     customSettings = {
-      extra-experimental-features = [
+      experimental-features = [
         "nix-command"
         "flakes"
       ];
