@@ -11,7 +11,7 @@
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
-  users.users.nobr.shell = pkgs.fish;
+  users.users.syrkis.shell = pkgs.fish;
 
   environment.systemPackages = with pkgs; [
     git
