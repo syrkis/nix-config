@@ -36,6 +36,9 @@
     chawan
     # pinentry-mac
     yubikey-manager
+    rustup
+    zotero
+    tailscale
     openssh
     libfido2
     hut
@@ -59,6 +62,7 @@
     bun
     chafa
     chezmoi
+    ghostty-bin
     # codex
     # opencode
     # clang

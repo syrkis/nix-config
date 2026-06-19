@@ -15,7 +15,6 @@
 
     brews = [
       "pkg-config"
-      "watch"
       "bfg"
       "fswatch"
       "pdf2svg"
@@ -43,11 +42,11 @@
       # "obsidian"
       "whatsapp"
       "obs"
-      "zotero"
+      # "zotero"
       # "fuse-t"
       # "anki"
       # "openra"
-      "tailscale-app"
+      # "tailscale-app"
       # "fuse-t-sshfs"
       "readest"
       # "zed"

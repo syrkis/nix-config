@@ -21,7 +21,10 @@ in
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.${username}.imports = [ ../modules/home.nix ];
+    users.${username} = {
+      imports = [ ../modules/home.nix ];
+      home.stateVersion = "25.11";
+    };
     extraSpecialArgs = { inherit inputs; };
   };
 }
