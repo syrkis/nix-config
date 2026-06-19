@@ -34,6 +34,10 @@
     nushell
     # vllm
     chawan
+    ty
+    uiua
+    ruff
+    uv
     # pinentry-mac
     yubikey-manager
     rustup
@@ -46,7 +50,6 @@
     viu
     libwebp
     astro-language-server
-    uv
     autoconf
     automake
     syncthing
