@@ -43,6 +43,7 @@
     hut
     gopass
     viu
+    libwebp
     astro-language-server
     uv
     autoconf
