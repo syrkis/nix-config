@@ -1,7 +1,5 @@
 { pkgs, lib, ... }:
 {
-  home.stateVersion = "25.11";
-
   targets.darwin.currentHostDefaults = lib.mkIf pkgs.stdenv.isDarwin {
     "com.apple.controlcenter".BatteryShowPercentage = true;
   };
