@@ -1,5 +1,5 @@
 # modules/nixos.nix
-{ pkgs, ... }:
+{ pkgs, lib, ... }:
 {
   services.pcscd.enable = true;
 
@@ -8,8 +8,8 @@
     libu2f-host
   ];
 
-  console.keyMap = "us";
-  services.xserver.xkb.layout = "us";
+  console.keyMap = lib.mkForce "us";
+  services.xserver.xkb.layout = lib.mkForce "us";
 
   programs.fish.enable = true;
   programs.zsh.enable = true;
