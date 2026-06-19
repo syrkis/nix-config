@@ -8,6 +8,9 @@
     libu2f-host
   ];
 
+  console.keyMap = "us";
+  services.xserver.xkb.layout = "us";
+
   programs.fish.enable = true;
   programs.zsh.enable = true;
 
