@@ -37,7 +37,7 @@
     # pinentry-mac
     yubikey-manager
     rustup
-    zotero
+    # zotero
     tailscale
     openssh
     libfido2
@@ -51,7 +51,6 @@
     automake
     syncthing
     bat
-    # ghostty-bin
     helix
     timg
     bk
@@ -62,7 +61,7 @@
     bun
     chafa
     chezmoi
-    ghostty-bin
+    # ghostty
     # codex
     # opencode
     # clang
