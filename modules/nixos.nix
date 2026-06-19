@@ -14,7 +14,7 @@
   environment.systemPackages = with pkgs; [
     git
     gnupg
-    pinentry
+    pinentry-curses
     yubikey-manager
     openssh
     libfido2
