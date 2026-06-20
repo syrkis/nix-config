@@ -44,7 +44,6 @@
     yubikey-manager
     rustup
     # zotero
-    tailscale
     openssh
     libfido2
     hut
@@ -143,7 +142,6 @@
     zk
   ];
 
-  services.tailscale.enable = true;
   services.gpg-agent = {
     enable = true;
     enableFishIntegration = true;
