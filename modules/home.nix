@@ -25,8 +25,8 @@
       };
     })
     khard
-    stdenv.cc.cc.lib
     # emacs31
+    stdenv.cc
     rumdl
     gifsicle
     python313
