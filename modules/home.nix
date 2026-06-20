@@ -149,8 +149,9 @@
     enableZshIntegration = true;
     enableScDaemon = true;
     enableSshSupport = false;
+
+    pinentry.package = if pkgs.stdenv.isDarwin then pkgs.pinentry_mac else pkgs.pinentry-curses;
   };
-  services.gpg-agent.pinentry.package = pkgs.lib.mkIf pkgs.stdenv.isDarwin pkgs.pinentry_mac;
 
   programs.bash.enable = true;
   programs.zsh = {
@@ -172,6 +173,9 @@
     interactiveShellInit = ''
       zoxide init fish | source
       bind \cz 'fg 2>/dev/null; commandline -f repaint'
+              
+      export GPG_TTY="$(tty)"
+      gpg-connect-agent updatestartuptty /bye >/dev/null
     '';
 
     shellAliases = {
