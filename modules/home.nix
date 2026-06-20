@@ -28,6 +28,7 @@
     # emacs31
     rumdl
     gifsicle
+    python313
     simple-completion-language-server
     # ollama
     mdfried
