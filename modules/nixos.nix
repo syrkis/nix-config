@@ -23,5 +23,13 @@
     yubikey-manager
     openssh
     libfido2
+
+    gcc.cc.lib
   ];
+
+  environment.sessionVariables = {
+    LD_LIBRARY_PATH = lib.makeLibraryPath [
+      pkgs.gcc.cc.lib
+    ];
+  };
 }
