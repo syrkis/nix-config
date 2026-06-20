@@ -7,6 +7,8 @@ let
   ];
 in
 {
+  services.tailscale.enable = true;
+
   services.pcscd.enable = true;
 
   services.udev.packages = with pkgs; [
@@ -29,6 +31,7 @@ in
     yubikey-manager
     openssh
     libfido2
+    tailscale
 
     gcc.cc.lib
     zlib
