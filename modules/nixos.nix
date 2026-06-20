@@ -1,5 +1,11 @@
 # modules/nixos.nix
 { pkgs, lib, ... }:
+let
+  runtimeLibs = with pkgs; [
+    gcc.cc.lib
+    zlib
+  ];
+in
 {
   services.pcscd.enable = true;
 
@@ -25,11 +31,10 @@
     libfido2
 
     gcc.cc.lib
+    zlib
   ];
 
   environment.sessionVariables = {
-    LD_LIBRARY_PATH = lib.makeLibraryPath [
-      pkgs.gcc.cc.lib
-    ];
+    LD_LIBRARY_PATH = lib.makeLibraryPath runtimeLibs;
   };
 }
