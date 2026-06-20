@@ -25,6 +25,7 @@
       };
     })
     khard
+    stdenv.cc.cc.lib
     # emacs31
     rumdl
     gifsicle

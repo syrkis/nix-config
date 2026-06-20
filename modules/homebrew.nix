@@ -39,7 +39,7 @@
       "signal"
       "whatsapp"
       "obs"
-      "zotero"
+      # "zotero"
       "readest"
       "zen"
       "beeper"
