@@ -143,6 +143,7 @@
     zk
   ];
 
+  services.tailscale.enable = true;
   services.gpg-agent = {
     enable = true;
     enableFishIntegration = true;
