@@ -30,6 +30,7 @@ in
     pinentry-curses
     yubikey-manager
     openssh
+    libreoffice
     libfido2
     tailscale
     ghostty
