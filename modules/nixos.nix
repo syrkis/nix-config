@@ -32,6 +32,7 @@ in
     openssh
     libfido2
     tailscale
+    ghostty
 
     gcc.cc.lib
     zlib
